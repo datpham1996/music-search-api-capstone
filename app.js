@@ -22,7 +22,7 @@ function displayTrackResults(responseJson) {
     }
 
     $('#results-track-list').html(html);
-    $('#results').removeClass('hidden');
+    $('#results-track-list-wrapper').removeClass('hidden');
 }
 
 function getTrackResults(query) {
@@ -75,14 +75,13 @@ function displayArtistResults(responseJson) {
 
         html += `
         <li><h3>${responseJson.results.artistmatches.artist[i].name}</h3>
-          <p>Description: ${responseJson.results.artistmatches.artist[i].artist}</p>
           <p>URL : <a href="${responseJson.results.artistmatches.artist[i].url}">${responseJson.results.artistmatches.artist[i].url}</a></p>
           <img src="${responseJson.results.artistmatches.artist[i].image[3]['#text']}" class="results-image" alt="${responseJson.results.artistmatches.artist[i].name}">
         </li>`;
     }
 
     $('#results-artist-list').html(html);
-    $('#results').removeClass('hidden');
+    $('#results-artist-list-wrapper').removeClass('hidden');
 }
 
 function getArtistResults(query) {
@@ -134,14 +133,13 @@ function displayAlbumResults(responseJson) {
 
         html += `
         <li><h3>${responseJson.results.albummatches.album[i].name}</h3>
-          <p>Description: ${responseJson.results.albummatches.album[i].album}</p>
           <p>URL : <a href="${responseJson.results.albummatches.album[i].url}">${responseJson.results.albummatches.album[i].url}</a></p>
           <img src="${responseJson.results.albummatches.album[i].image[3]['#text']}" class="results-image" alt="${responseJson.results.albummatches.album[i].name}">
         </li>`;
     }
 
     $('#results-album-list').html(html);
-    $('#results').removeClass('hidden');
+    $('#results-album-list-wrapper').removeClass('hidden');
 }
 
 function getAlbumResults(query) {
@@ -175,5 +173,20 @@ function watchAlbumForm() {
 }
 // stop album functionality
 
-$(watchTrackForm);
+
+
+
+
+
+
+
+
+
+//call back watch function
+function main(){
+    watchTrackForm();
+    watchArtistForm();
+    watchAlbumForm();
+}
+$(main);
 
