@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MUSIC API STONE</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"
+        type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <main class="container">
+        <!-- start track results -->
+        <form class="track-form">
+            <label for="track">
+                Search for any track
+                <input type="text" name="track" id="track" required value="Disarm" />
+            </label>
+
+            <button type="submit" name="Submit" value="Submit">Submit</button>
+        </form>
+        <p id="js-error-message" class="error-message"></p>
+        <section id="results" class="hidden">
+            <h2>Search track results</h2>
+            <ul id="results-track-list"></ul>
+        </section>
+        <!-- stop track results -->
+
+
+
+
+        <!-- start artist results -->
+        <form class="artist-form">
+            <label for="artist">
+                Search for any artist
+                <input type="text" name="artist" id="artist" required value="Disarm" />
+            </label>
+
+            <button type="submit" name="Submit" value="Submit">Submit</button>
+        </form>
+        <p id="js-error-message" class="error-message"></p>
+        <section id="results" class="hidden">
+            <h2>Search artist results</h2>
+            <ul id="results-artist-list"></ul>
+        </section>
+        <!-- stop artist results -->
+
+
+
+
+
+
+        <!-- start album results -->
+        <form class="album-form">
+            <label for="album">
+                Search for any album
+                <input type="text" name="album" id="album" required value="Disarm" />
+            </label>
+
+            <button type="submit" name="Submit" value="Submit">Submit</button>
+        </form>
+        <p id="js-error-message" class="error-message"></p>
+        <section id="results" class="hidden">
+            <h2>Search album results</h2>
+            <ul id="results-album-list"></ul>
+        </section>
+        <!-- stop album results -->
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
