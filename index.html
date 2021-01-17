@@ -2,95 +2,118 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>MUSIC API CAPSTONE</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"
-        type="text/css" />
-    <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MUSIC SEARCH API CAPSTONE</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"
+    type="text/css" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
+  <section>
     <header>
-        <h1>Music Api Capstone</h1>
-        <nav>
-            <ul>
-                <li>Search Track</li>
-                <li>Search Artist</li>
-                <li>Search Album</li>
+      <div class="banner">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="#">MUSIC SEARCH API CAPSTONE</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Search Track</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Search Artist</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Search Album</a>
+              </li>
             </ul>
+          </div>
         </nav>
     </header>
     <main class="container">
-        <!-- start track results -->
-        <form class="track-form">
-            <label for="track">
-                Search for any track
-                <input type="text" name="track" id="track" required value="Disarm" />
-            </label>
+      <!-- start track results -->
+      <form class="track-form">
+        <label for="track">
+          Search for any track
+          <input type="text" name="track" id="track" required value="Disarm Me" />
+        </label>
 
-            <button type="submit" name="Submit" value="Submit">Submit</button>
-        </form>
-        <p id="js-error-message" class="error-message"></p>
-        <section id="results-track-list-wrapper" class="hidden">
-            <h2>Search track results</h2>
-            <ul id="results-track-list"></ul>
-        </section>
-        <!-- stop track results -->
+        <button type="submit" name="Submit" value="Submit">Submit</button>
+      </form>
+      <p id="js-error-message" class="error-message"></p>
+      <section id="results-track-list-wrapper" class="hidden">
 
-
-
-
-        <!-- start artist results -->
-        <form class="artist-form">
-            <label for="artist">
-                Search for any artist
-                <input type="text" name="artist" id="artist" required value="Kaskade" />
-            </label>
-
-            <button type="submit" name="Submit" value="Submit">Submit</button>
-        </form>
-        <p id="js-error-message" class="error-message"></p>
-        <section id="results-artist-list-wrapper" class="hidden">
-            <h2>Search artist results</h2>
-            <ul id="results-artist-list"></ul>
-        </section>
-        <!-- stop artist results -->
+        <ul id="results-track-list"></ul>
+      </section>
+      <!-- stop track results -->
 
 
 
 
+      <!-- start artist results -->
+      <form class="artist-form">
+        <label for="artist">
+          Search for any artist
+          <input type="text" name="artist" id="artist" required value="Kaskade" />
+        </label>
+
+        <button type="submit" name="Submit" value="Submit">Submit</button>
+      </form>
+      <p id="js-error-message" class="error-message"></p>
+      <section id="results-artist-list-wrapper" class="hidden">
+
+        <ul id="results-artist-list"></ul>
+      </section>
+      <!-- stop artist results -->
 
 
-        <!-- start album results -->
-        <form class="album-form">
-            <label for="album">
-                Search for any album
-                <input type="text" name="album" id="album" required value="Parklife" />
-            </label>
 
-            <button type="submit" name="Submit" value="Submit">Submit</button>
-        </form>
-        <p id="js-error-message" class="error-message"></p>
-        <section id="results-album-list-wrapper" class="hidden">
-            <h2>Search album results</h2>
-            <ul id="results-album-list"></ul>
-        </section>
-        <!-- stop album results -->
+
+
+
+      <!-- start album results -->
+      <form class="album-form">
+        <label for="album">
+          Search for any album
+          <input type="text" name="album" id="album" required value="Parklife" />
+        </label>
+
+        <button type="submit" name="Submit" value="Submit">Submit</button>
+      </form>
+      <p id="js-error-message" class="error-message"></p>
+      <section id="results-album-list-wrapper" class="hidden">
+
+        <ul id="results-album-list"></ul>
+      </section>
+      <!-- stop album results -->
     </main>
-    <footer>
-        @2021 Dat Pham
-        <ul>
-            <li>Github Repo</li>
-            <li>LinkedIn</li>
-            <li>Porfolio</li>
-        </ul>
-    </footer>
+  </section>
+  <footer>
+    @2021 Dat Pham
+    <ul>
+      <li>Github Repo</li>
+      <li>LinkedIn</li>
+      <li>Porfolio</li>
+    </ul>
+  </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.js"
-        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <script src="app.js"></script>
 </body>
 
 </html>
