@@ -14,10 +14,11 @@ function displayTrackResults(responseJson) {
         console.log(responseJson.results.trackmatches.track[i]);
 
         html += `
-        <li><h3>${responseJson.results.trackmatches.track[i].name}</h3>
+        <li class="clearfix">
+        <img src="${responseJson.results.trackmatches.track[i].image[3]['#text']}" class="results-image" alt="${responseJson.results.trackmatches.track[i].name}">
+        <h3>${responseJson.results.trackmatches.track[i].name}</h3>
           <p>Description: ${responseJson.results.trackmatches.track[i].artist}</p>
           <p>URL : <a href="${responseJson.results.trackmatches.track[i].url}">${responseJson.results.trackmatches.track[i].url}</a></p>
-          <img src="${responseJson.results.trackmatches.track[i].image[3]['#text']}" class="results-image" alt="${responseJson.results.trackmatches.track[i].name}">
         </li>`;
     }
 
@@ -74,9 +75,10 @@ function displayArtistResults(responseJson) {
         console.log(responseJson.results.artistmatches.artist[i]);
 
         html += `
-        <li><h3>${responseJson.results.artistmatches.artist[i].name}</h3>
+        <li class="clearfix">
+        <img src="${responseJson.results.artistmatches.artist[i].image[3]['#text']}" class="results-image" alt="${responseJson.results.artistmatches.artist[i].name}">
+        <h3>${responseJson.results.artistmatches.artist[i].name}</h3>
           <p>URL : <a href="${responseJson.results.artistmatches.artist[i].url}">${responseJson.results.artistmatches.artist[i].url}</a></p>
-          <img src="${responseJson.results.artistmatches.artist[i].image[3]['#text']}" class="results-image" alt="${responseJson.results.artistmatches.artist[i].name}">
         </li>`;
     }
 
@@ -132,9 +134,10 @@ function displayAlbumResults(responseJson) {
         console.log(responseJson.results.albummatches.album[i]);
 
         html += `
-        <li><h3>${responseJson.results.albummatches.album[i].name}</h3>
+        <li class="clearfix">
+        <img src="${responseJson.results.albummatches.album[i].image[3]['#text']}" class="results-image" alt="${responseJson.results.albummatches.album[i].name}">
+        <h3>${responseJson.results.albummatches.album[i].name}</h3>
           <p>URL : <a href="${responseJson.results.albummatches.album[i].url}">${responseJson.results.albummatches.album[i].url}</a></p>
-          <img src="${responseJson.results.albummatches.album[i].image[3]['#text']}" class="results-image" alt="${responseJson.results.albummatches.album[i].name}">
         </li>`;
     }
 
@@ -183,7 +186,7 @@ function watchAlbumForm() {
 
 
 //call back watch function
-function main(){
+function main() {
     watchTrackForm();
     watchArtistForm();
     watchAlbumForm();
