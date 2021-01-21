@@ -76,6 +76,10 @@ h2 {
     color: #8d1515;
     font-size: 25px;
 }
+h3 {
+    color: #8d1515;
+    font-size: 18px;
+}
 
 form {
     padding-right: 8px;
@@ -163,7 +167,7 @@ Content styles (Main Module)
 main.container {
     width: 80%;
     max-width: 1200px;
-    border:1px solid red;
+    
     margin: 20px auto;
     padding: 100px;
 }
@@ -181,6 +185,12 @@ main.container {
 main.container form label.form-left-column, main.container form button.form-right-column {
     display: inline-block;
     width: auto;
+}
+.wrapper{
+    display: block;
+    float: left;
+    width: 24%;
+    
 }
 /* main.container form label.form-left-column input {
     

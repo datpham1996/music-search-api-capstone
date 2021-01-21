@@ -9,83 +9,89 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"
     type="text/css" />
   <link href="style.css" rel="stylesheet" type="text/css" />
-  
+
 </head>
 
 <body>
-    <header>
-      <nav>
-        <a href="#" class="logo">MUSIC SEARCH API </a>
-        <div class="topnav" id="myTopnav">
-            <a href="#home" class="active">Home</a>
-            <a href="#track" class="active">Search Track</a>
-            <a href="#artist" class="active">Search Artist</a>
-            <a href="#album" class="active">Search Album</a>
-                <i class="fa fa-bars"></i>
-            </a>
-        </div>
+  <header>
+    <nav>
+      <a href="#" class="logo">MUSIC SEARCH API </a>
+      <div class="topnav" id="myTopnav">
+        <a href="#home" class="active">Home</a>
+        <a href="#track" class="active">Search Track</a>
+        <a href="#artist" class="active">Search Artist</a>
+        <a href="#album" class="active">Search Album</a>
+        <i class="fa fa-bars"></i>
+        </a>
+      </div>
 
 
     </nav>
-    </header>
-    <main class="container">
-      <!-- start track results -->
-      <form class="track-form">
-        <label class="form-left-column" for="track">
-          <h2>Search for any track</h2>
-          <input type="text" name="track" id="track" required value="Disarm Me" />
-        </label>
-
-        <button class="form-right-column" type="submit" name="Submit" value="Submit">Submit</button>
-      </form>
-      <p id="js-error-message" class="error-message"></p>
-      <section id="results-track-list-wrapper" class="hidden">
-
-        <ul id="results-track-list"></ul>
-      </section>
-      <!-- stop track results -->
+  </header>
+  <section class="wrapper">
+    <h3>Are you tired of searching your favorite music?</h3>
+    <h3>This is a simple application that will help your search your favorite track, artist, or album</h3>
+  </section>
 
 
+  <main class="container">
+    <!-- start track results -->
+    <form class="track-form">
+      <label class="form-left-column" for="track">
+        <h2>Search for any track</h2>
+        <input type="text" name="track" id="track" required value="Disarm Me" />
+      </label>
 
+      <button class="form-right-column" type="submit" name="Submit" value="Submit">Submit</button>
+    </form>
+    <p id="js-error-message" class="error-message"></p>
+    <section id="results-track-list-wrapper" class="hidden">
 
-      <!-- start artist results -->
-      <form class="artist-form">
-        <label class="form-left-column" for="artist">
-          <h2>Search for any artist</h2>
-          <input type="text" name="artist" id="artist" required value="Kaskade" />
-        </label>
-
-        <button class="form-right-column" type="submit" name="Submit" value="Submit">Submit</button>
-      </form>
-      <p id="js-error-message" class="error-message"></p>
-      <section id="results-artist-list-wrapper" class="hidden">
-
-        <ul id="results-artist-list"></ul>
-      </section>
-      <!-- stop artist results -->
+      <ul id="results-track-list"></ul>
+    </section>
+    <!-- stop track results -->
 
 
 
 
+    <!-- start artist results -->
+    <form class="artist-form">
+      <label class="form-left-column" for="artist">
+        <h2>Search for any artist</h2>
+        <input type="text" name="artist" id="artist" required value="Kaskade" />
+      </label>
+
+      <button class="form-right-column" type="submit" name="Submit" value="Submit">Submit</button>
+    </form>
+    <p id="js-error-message" class="error-message"></p>
+    <section id="results-artist-list-wrapper" class="hidden">
+
+      <ul id="results-artist-list"></ul>
+    </section>
+    <!-- stop artist results -->
 
 
-      <!-- start album results -->
-      <form class="album-form">
-        <label class="form-left-column" for="album">
-          <h2>Search for any album</h2>
-          <input type="text" name="album" id="album" required value="Parklife" />
-        </label>
 
-        <button class="form-right-column" type="submit" name="Submit" value="Submit">Submit</button>
-      </form>
-      <p id="js-error-message" class="error-message"></p>
-      <section id="results-album-list-wrapper" class="hidden">
 
-        <ul id="results-album-list"></ul>
-      </section>
-      <!-- stop album results -->
-    </main>
-  
+
+
+    <!-- start album results -->
+    <form class="album-form">
+      <label class="form-left-column" for="album">
+        <h2>Search for any album</h2>
+        <input type="text" name="album" id="album" required value="Parklife" />
+      </label>
+
+      <button class="form-right-column" type="submit" name="Submit" value="Submit">Submit</button>
+    </form>
+    <p id="js-error-message" class="error-message"></p>
+    <section id="results-album-list-wrapper" class="hidden">
+
+      <ul id="results-album-list"></ul>
+    </section>
+    <!-- stop album results -->
+  </main>
+
   <footer>
     @2021 Dat Pham
     <ul>
