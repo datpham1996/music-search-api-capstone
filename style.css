@@ -49,7 +49,7 @@ General styles (General Module, wrapping around the modules below)
 */
 
 html {
-    background: rgba(0, 0, 0, 0) url("images/handvinyl.jfif") no-repeat center center fixed;
+    background: rgba(0, 0, 0, 0) url("images/man.webp") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -76,6 +76,7 @@ h2 {
     color: #8d1515;
     font-size: 25px;
 }
+
 h3 {
     color: #8d1515;
     font-size: 18px;
@@ -117,10 +118,12 @@ label {
     display: block;
     margin: 10px;
 }
-ul{
+
+ul {
     list-style-type: none;
-} 
-li{
+}
+
+li {
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -141,14 +144,25 @@ Header styles (Main Module)
 (all the styles inside the < header > or < nav > tags)
 */
 
-.topnav a {
+.logo {
+    font-family: cursive;
+    font-weight: 100px;
+    color: rgb(121, 8, 121);
+    font-size: 42px;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+nav div.topnav a {
     display: flex;
     font-family: cursive;
     float: right;
-    color: rgb(219, 110, 219);
+    color: rgb(121, 8, 121);
     text-align: center;
     padding: 0px 2%;
     font-size: 17px;
+    
 }
 
 .topnav a.active {
@@ -167,50 +181,48 @@ Content styles (Main Module)
 main.container {
     width: 80%;
     max-width: 1200px;
-    
+    text-align: center;
     margin: 20px auto;
     padding: 100px;
-}
-
-.logo {
-    font-family: cursive;
-    font-weight: 50px;
-    color: rgb(219, 110, 219);
-    font-size: 42px;
-    text-decoration: none;
-    margin-top: 15px;
-    margin-bottom: 15px;
 }
 
 main.container form label.form-left-column, main.container form button.form-right-column {
     display: inline-block;
     width: auto;
 }
-.wrapper{
+
+section.wrapper {
     display: block;
     float: left;
-    width: 24%;
-    
+    width: 25%;
+    padding: 40px;
+    text-align: center;
+    line-height: 20px;
 }
+
 /* main.container form label.form-left-column input {
     
     width: 70%;
 } */
-section ul li img.results-image{
+
+section ul li img.results-image {
     display: inline-block;
     float: right;
     width: 40%;
     margin-left: 10px;
-    border:1px solid gray;
+    border: 1px solid gray;
     border-radius: 15px;
 }
-section ul li h3{
+
+section ul li h3 {
     font-size: 120%;
     margin-bottom: 10px;
 }
-section ul li p{
+
+section ul li p {
     font-size: 110%;
 }
+
 /* -------------------------------------
 Footer styles (Main Module)
 (all the styles inside the < footer > tag)

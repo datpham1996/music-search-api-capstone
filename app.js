@@ -1,9 +1,6 @@
 'use strict';
 
 
-const searchArtistUrl = `http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=cher&api_key=5f9a6038d66d4bba8b7e4a2a867a1226&format=json`
-const searchAlbumUrl = `http://ws.audioscrobbler.com/2.0/?method=album.search&album=believe&api_key=5f9a6038d66d4bba8b7e4a2a867a1226&format=json`
-
 
 // start track functionality
 function displayTrackResults(responseJson) {
@@ -27,7 +24,7 @@ function displayTrackResults(responseJson) {
 }
 
 function getTrackResults(query) {
-    const searchTrackUrl = `http://ws.audioscrobbler.com/2.0/?method=track.search&track=${query}&api_key=5f9a6038d66d4bba8b7e4a2a867a1226&format=json`
+    const searchTrackUrl = `https://ws.audioscrobbler.com/2.0/?method=track.search&track=${query}&api_key=5f9a6038d66d4bba8b7e4a2a867a1226&format=json`
     console.log(searchTrackUrl);
 
 
@@ -87,7 +84,7 @@ function displayArtistResults(responseJson) {
 }
 
 function getArtistResults(query) {
-    const searchArtistUrl = `http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=${query}&api_key=5f9a6038d66d4bba8b7e4a2a867a1226&format=json`
+    const searchArtistUrl = `https://ws.audioscrobbler.com/2.0/?method=artist.search&artist=${query}&api_key=5f9a6038d66d4bba8b7e4a2a867a1226&format=json`
     console.log(searchArtistUrl);
 
 
@@ -146,7 +143,7 @@ function displayAlbumResults(responseJson) {
 }
 
 function getAlbumResults(query) {
-    const searchAlbumUrl = `http://ws.audioscrobbler.com/2.0/?method=album.search&album=${query}&api_key=5f9a6038d66d4bba8b7e4a2a867a1226&format=json`
+    const searchAlbumUrl = `https://ws.audioscrobbler.com/2.0/?method=album.search&album=${query}&api_key=5f9a6038d66d4bba8b7e4a2a867a1226&format=json`
     console.log(searchAlbumUrl);
 
 

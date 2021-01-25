@@ -17,10 +17,11 @@
     <nav>
       <a href="#" class="logo">MUSIC SEARCH API </a>
       <div class="topnav" id="myTopnav">
-        <a href="#home" class="active">Home</a>
-        <a href="#track" class="active">Search Track</a>
-        <a href="#artist" class="active">Search Artist</a>
         <a href="#album" class="active">Search Album</a>
+        <a href="#artist" class="active">Search Artist</a>
+        <a href="#track" class="active">Search Track</a>
+        <a href="#home" class="active">Home</a>
+        
         <i class="fa fa-bars"></i>
         </a>
       </div>
@@ -29,8 +30,9 @@
     </nav>
   </header>
   <section class="wrapper">
-    <h3>Are you tired of searching your favorite music?</h3>
-    <h3>This is a simple application that will help your search your favorite track, artist, or album</h3>
+    <h3>Are you tired of searching for your favorite music?</h3>
+    <br>
+    <h3>This is a simple application that will help your search for your favorite track, artist, or album!</h3>
   </section>
 
 
@@ -42,7 +44,7 @@
         <input type="text" name="track" id="track" required value="Disarm Me" />
       </label>
 
-      <button class="form-right-column" type="submit" name="Submit" value="Submit">Submit</button>
+      <button class="form-right-column" type="submit" name="Submit" value="Submit">Search</button>
     </form>
     <p id="js-error-message" class="error-message"></p>
     <section id="results-track-list-wrapper" class="hidden">
@@ -61,7 +63,7 @@
         <input type="text" name="artist" id="artist" required value="Kaskade" />
       </label>
 
-      <button class="form-right-column" type="submit" name="Submit" value="Submit">Submit</button>
+      <button class="form-right-column" type="submit" name="Submit" value="Submit">Search</button>
     </form>
     <p id="js-error-message" class="error-message"></p>
     <section id="results-artist-list-wrapper" class="hidden">
@@ -79,10 +81,10 @@
     <form class="album-form">
       <label class="form-left-column" for="album">
         <h2>Search for any album</h2>
-        <input type="text" name="album" id="album" required value="Parklife" />
+        <input type="text" name="album" id="album" required value="Automatic" />
       </label>
 
-      <button class="form-right-column" type="submit" name="Submit" value="Submit">Submit</button>
+      <button class="form-right-column" type="submit" name="Submit" value="Submit">Search</button>
     </form>
     <p id="js-error-message" class="error-message"></p>
     <section id="results-album-list-wrapper" class="hidden">
