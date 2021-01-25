@@ -4,11 +4,11 @@
 
 // start track functionality
 function displayTrackResults(responseJson) {
-    console.log(responseJson);
+    //console.log(responseJson);
     $('#results-track-list').empty();
     let html = '';
     for (let i = 0; i < responseJson.results.trackmatches.track.length; i++) {
-        console.log(responseJson.results.trackmatches.track[i]);
+        //console.log(responseJson.results.trackmatches.track[i]);
 
         html += `
         <li class="clearfix">
@@ -25,7 +25,7 @@ function displayTrackResults(responseJson) {
 
 function getTrackResults(query) {
     const searchTrackUrl = `https://ws.audioscrobbler.com/2.0/?method=track.search&track=${query}&api_key=5f9a6038d66d4bba8b7e4a2a867a1226&format=json`
-    console.log(searchTrackUrl);
+    //console.log(searchTrackUrl);
 
 
     fetch(searchTrackUrl)
@@ -48,7 +48,7 @@ function watchTrackForm() {
             .find('#track')
             .val();
 
-        console.log(track)
+        //console.log(track)
         getTrackResults(track);
     });
 }
@@ -65,11 +65,11 @@ function watchTrackForm() {
 
 // start artist functionality
 function displayArtistResults(responseJson) {
-    console.log(responseJson);
+    //console.log(responseJson);
     $('#results-artist-list').empty();
     let html = '';
     for (let i = 0; i < responseJson.results.artistmatches.artist.length; i++) {
-        console.log(responseJson.results.artistmatches.artist[i]);
+        //console.log(responseJson.results.artistmatches.artist[i]);
 
         html += `
         <li class="clearfix">
@@ -85,7 +85,7 @@ function displayArtistResults(responseJson) {
 
 function getArtistResults(query) {
     const searchArtistUrl = `https://ws.audioscrobbler.com/2.0/?method=artist.search&artist=${query}&api_key=5f9a6038d66d4bba8b7e4a2a867a1226&format=json`
-    console.log(searchArtistUrl);
+    //console.log(searchArtistUrl);
 
 
     fetch(searchArtistUrl)
@@ -108,7 +108,7 @@ function watchArtistForm() {
             .find('#artist')
             .val();
 
-        console.log(artist)
+        //console.log(artist)
         getArtistResults(artist);
     });
 }
@@ -124,11 +124,11 @@ function watchArtistForm() {
 
 // start album functionality
 function displayAlbumResults(responseJson) {
-    console.log(responseJson);
+    //console.log(responseJson);
     $('#results-album-list').empty();
     let html = '';
     for (let i = 0; i < responseJson.results.albummatches.album.length; i++) {
-        console.log(responseJson.results.albummatches.album[i]);
+        //console.log(responseJson.results.albummatches.album[i]);
 
         html += `
         <li class="clearfix">
@@ -144,7 +144,7 @@ function displayAlbumResults(responseJson) {
 
 function getAlbumResults(query) {
     const searchAlbumUrl = `https://ws.audioscrobbler.com/2.0/?method=album.search&album=${query}&api_key=5f9a6038d66d4bba8b7e4a2a867a1226&format=json`
-    console.log(searchAlbumUrl);
+    //console.log(searchAlbumUrl);
 
 
     fetch(searchAlbumUrl)
@@ -167,11 +167,16 @@ function watchAlbumForm() {
             .find('#album')
             .val();
 
-        console.log(album)
+        //console.log(album)
         getAlbumResults(album);
     });
 }
 // stop album functionality
+
+
+
+
+
 
 
 
