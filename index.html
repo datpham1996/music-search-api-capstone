@@ -15,15 +15,15 @@
 <body>
   <header>
     <nav>
-      <a href="#" class="logo">MUSIC SEARCH API </a>
-      <div class="topnav" id="myTopnav">
-        <a href="#album" class="active">Search Album</a>
-        <a href="#artist" class="active">Search Artist</a>
-        <a href="#track" class="active">Search Track</a>
-        <a href="#home" class="active">Home</a>
-        
-        <i class="fa fa-bars"></i>
-        </a>
+      <a href="#" class="logo">Music Dream </a>
+      <div class="dropdown">
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
+          <a href="#">Home</a>
+          <a href="#">Search Track</a>
+          <a href="#">Search Artist</a>
+          <a href="#">Search Album</a>
+        </div>
       </div>
 
 
@@ -37,7 +37,6 @@
 
 
   <main class="container">
-    <!-- start track results -->
     <form class="track-form">
       <label class="form-left-column" for="track">
         <h2>Search for any track</h2>
@@ -51,12 +50,8 @@
 
       <ul id="results-track-list"></ul>
     </section>
-    <!-- stop track results -->
 
 
-
-
-    <!-- start artist results -->
     <form class="artist-form">
       <label class="form-left-column" for="artist">
         <h2>Search for any artist</h2>
@@ -70,14 +65,8 @@
 
       <ul id="results-artist-list"></ul>
     </section>
-    <!-- stop artist results -->
-
-
-
-
-
-
-    <!-- start album results -->
+  
+   
     <form class="album-form">
       <label class="form-left-column" for="album">
         <h2>Search for any album</h2>
@@ -91,7 +80,7 @@
 
       <ul id="results-album-list"></ul>
     </section>
-    <!-- stop album results -->
+   
   </main>
 
   <footer>

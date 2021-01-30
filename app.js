@@ -2,17 +2,18 @@
 
 
 
-// start track functionality
+
 function displayTrackResults(responseJson) {
-    //console.log(responseJson);
+
     $('#results-track-list').empty();
     let html = '';
     for (let i = 0; i < responseJson.results.trackmatches.track.length; i++) {
-        //console.log(responseJson.results.trackmatches.track[i]);
+
 
         html += `
         <li class="clearfix">
-        <img src="${responseJson.results.trackmatches.track[i].image[3]['#text']}" class="results-image" alt="${responseJson.results.trackmatches.track[i].name}">
+        <img src="${responseJson.results.trackmatches.track[i].image[3]['#text']}" class="results-image" 
+            alt="${responseJson.results.trackmatches.track[i].name}">
         <h3>${responseJson.results.trackmatches.track[i].name}</h3>
           <p>Description: ${responseJson.results.trackmatches.track[i].artist}</p>
           <p>URL : <a href="${responseJson.results.trackmatches.track[i].url}">${responseJson.results.trackmatches.track[i].url}</a></p>
@@ -25,8 +26,6 @@ function displayTrackResults(responseJson) {
 
 function getTrackResults(query) {
     const searchTrackUrl = `https://ws.audioscrobbler.com/2.0/?method=track.search&track=${query}&api_key=5f9a6038d66d4bba8b7e4a2a867a1226&format=json`
-    //console.log(searchTrackUrl);
-
 
     fetch(searchTrackUrl)
         .then(response => {
@@ -47,33 +46,19 @@ function watchTrackForm() {
         const track = $(this)
             .find('#track')
             .val();
-
-        //console.log(track)
         getTrackResults(track);
     });
 }
-// stop track functionality
 
 
-
-
-
-
-
-
-
-
-// start artist functionality
 function displayArtistResults(responseJson) {
-    //console.log(responseJson);
     $('#results-artist-list').empty();
     let html = '';
     for (let i = 0; i < responseJson.results.artistmatches.artist.length; i++) {
-        //console.log(responseJson.results.artistmatches.artist[i]);
-
         html += `
         <li class="clearfix">
-        <img src="${responseJson.results.artistmatches.artist[i].image[3]['#text']}" class="results-image" alt="${responseJson.results.artistmatches.artist[i].name}">
+        <img src="${responseJson.results.artistmatches.artist[i].image[3]['#text']}" class="results-image" 
+            alt="${responseJson.results.artistmatches.artist[i].name}">
         <h3>${responseJson.results.artistmatches.artist[i].name}</h3>
           <p>URL : <a href="${responseJson.results.artistmatches.artist[i].url}">${responseJson.results.artistmatches.artist[i].url}</a></p>
         </li>`;
@@ -85,8 +70,6 @@ function displayArtistResults(responseJson) {
 
 function getArtistResults(query) {
     const searchArtistUrl = `https://ws.audioscrobbler.com/2.0/?method=artist.search&artist=${query}&api_key=5f9a6038d66d4bba8b7e4a2a867a1226&format=json`
-    //console.log(searchArtistUrl);
-
 
     fetch(searchArtistUrl)
         .then(response => {
@@ -107,32 +90,19 @@ function watchArtistForm() {
         const artist = $(this)
             .find('#artist')
             .val();
-
-        //console.log(artist)
         getArtistResults(artist);
     });
 }
-// stop artist functionality
 
 
-
-
-
-
-
-
-
-// start album functionality
 function displayAlbumResults(responseJson) {
-    //console.log(responseJson);
     $('#results-album-list').empty();
     let html = '';
     for (let i = 0; i < responseJson.results.albummatches.album.length; i++) {
-        //console.log(responseJson.results.albummatches.album[i]);
-
         html += `
         <li class="clearfix">
-        <img src="${responseJson.results.albummatches.album[i].image[3]['#text']}" class="results-image" alt="${responseJson.results.albummatches.album[i].name}">
+        <img src="${responseJson.results.albummatches.album[i].image[3]['#text']}" class="results-image" 
+            alt="${responseJson.results.albummatches.album[i].name}">
         <h3>${responseJson.results.albummatches.album[i].name}</h3>
           <p>URL : <a href="${responseJson.results.albummatches.album[i].url}">${responseJson.results.albummatches.album[i].url}</a></p>
         </li>`;
@@ -144,9 +114,6 @@ function displayAlbumResults(responseJson) {
 
 function getAlbumResults(query) {
     const searchAlbumUrl = `https://ws.audioscrobbler.com/2.0/?method=album.search&album=${query}&api_key=5f9a6038d66d4bba8b7e4a2a867a1226&format=json`
-    //console.log(searchAlbumUrl);
-
-
     fetch(searchAlbumUrl)
         .then(response => {
             if (response.ok) {
@@ -166,28 +133,10 @@ function watchAlbumForm() {
         const album = $(this)
             .find('#album')
             .val();
-
-        //console.log(album)
         getAlbumResults(album);
     });
 }
-// stop album functionality
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//call back watch function
 function main() {
     watchTrackForm();
     watchArtistForm();
