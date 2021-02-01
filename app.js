@@ -4,7 +4,7 @@
 
 
 function displayTrackResults(responseJson) {
-    // console.log(responseJson);
+    
     $('#results-track-list').empty();
     if (responseJson.results.trackmatches.track.length == 0) {
         $('.js-track-error-message').text(`No results`);
@@ -57,7 +57,7 @@ function watchTrackForm() {
 
 
 function displayArtistResults(responseJson) {
-    // console.log(responseJson);
+   
     $('#results-artist-list').empty();
     if (responseJson.results.artistmatches.artist.length == 0) {
         $('.js-artist-error-message').text(`No results`);
@@ -107,7 +107,7 @@ function watchArtistForm() {
 
 
 function displayAlbumResults(responseJson) {
-    // console.log(responseJson);
+    
     $('#results-album-list').empty();
     if (responseJson.results.albummatches.album.length == 0) {
         $('.js-album-error-message').text(`No results`);
