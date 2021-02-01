@@ -4,13 +4,17 @@
 
 
 function displayTrackResults(responseJson) {
-
+    // console.log(responseJson);
     $('#results-track-list').empty();
-    let html = '';
-    for (let i = 0; i < responseJson.results.trackmatches.track.length; i++) {
+    if (responseJson.results.trackmatches.track.length == 0) {
+        $('.js-track-error-message').text(`No results`);
+    }
+    else {
+        let html = '';
+        for (let i = 0; i < responseJson.results.trackmatches.track.length; i++) {
 
 
-        html += `
+            html += `
         <li class="clearfix">
         <img src="${responseJson.results.trackmatches.track[i].image[3]['#text']}" class="results-image" 
             alt="${responseJson.results.trackmatches.track[i].name}">
@@ -18,10 +22,11 @@ function displayTrackResults(responseJson) {
           <p>Description: ${responseJson.results.trackmatches.track[i].artist}</p>
           <p>URL : <a href="${responseJson.results.trackmatches.track[i].url}">${responseJson.results.trackmatches.track[i].url}</a></p>
         </li>`;
-    }
+        }
 
-    $('#results-track-list').html(html);
-    $('#results-track-list-wrapper').removeClass('hidden');
+        $('#results-track-list').html(html);
+        $('#results-track-list-wrapper').removeClass('hidden');
+    }
 }
 
 function getTrackResults(query) {
@@ -36,7 +41,7 @@ function getTrackResults(query) {
         })
         .then(responseJson => displayTrackResults(responseJson))
         .catch(err => {
-            $('#js-error-message').text(`Something went wrong: ${err.message}`);
+            $('.js-track-error-message').text(`Something went wrong: ${err.message}`);
         });
 }
 
@@ -52,20 +57,26 @@ function watchTrackForm() {
 
 
 function displayArtistResults(responseJson) {
+    // console.log(responseJson);
     $('#results-artist-list').empty();
-    let html = '';
-    for (let i = 0; i < responseJson.results.artistmatches.artist.length; i++) {
-        html += `
+    if (responseJson.results.artistmatches.artist.length == 0) {
+        $('.js-artist-error-message').text(`No results`);
+    }
+    else {
+        let html = '';
+        for (let i = 0; i < responseJson.results.artistmatches.artist.length; i++) {
+            html += `
         <li class="clearfix">
         <img src="${responseJson.results.artistmatches.artist[i].image[3]['#text']}" class="results-image" 
             alt="${responseJson.results.artistmatches.artist[i].name}">
         <h3>${responseJson.results.artistmatches.artist[i].name}</h3>
           <p>URL : <a href="${responseJson.results.artistmatches.artist[i].url}">${responseJson.results.artistmatches.artist[i].url}</a></p>
         </li>`;
-    }
+        }
 
-    $('#results-artist-list').html(html);
-    $('#results-artist-list-wrapper').removeClass('hidden');
+        $('#results-artist-list').html(html);
+        $('#results-artist-list-wrapper').removeClass('hidden');
+    }
 }
 
 function getArtistResults(query) {
@@ -80,7 +91,7 @@ function getArtistResults(query) {
         })
         .then(responseJson => displayArtistResults(responseJson))
         .catch(err => {
-            $('#js-error-message').text(`Something went wrong: ${err.message}`);
+            $('.js-artist-error-message').text(`Something went wrong: ${err.message}`);
         });
 }
 
@@ -96,20 +107,26 @@ function watchArtistForm() {
 
 
 function displayAlbumResults(responseJson) {
+    // console.log(responseJson);
     $('#results-album-list').empty();
-    let html = '';
-    for (let i = 0; i < responseJson.results.albummatches.album.length; i++) {
-        html += `
+    if (responseJson.results.albummatches.album.length == 0) {
+        $('.js-album-error-message').text(`No results`);
+    }
+    else {
+        let html = '';
+        for (let i = 0; i < responseJson.results.albummatches.album.length; i++) {
+            html += `
         <li class="clearfix">
         <img src="${responseJson.results.albummatches.album[i].image[3]['#text']}" class="results-image" 
             alt="${responseJson.results.albummatches.album[i].name}">
         <h3>${responseJson.results.albummatches.album[i].name}</h3>
           <p>URL : <a href="${responseJson.results.albummatches.album[i].url}">${responseJson.results.albummatches.album[i].url}</a></p>
         </li>`;
-    }
+        }
 
-    $('#results-album-list').html(html);
-    $('#results-album-list-wrapper').removeClass('hidden');
+        $('#results-album-list').html(html);
+        $('#results-album-list-wrapper').removeClass('hidden');
+    }
 }
 
 function getAlbumResults(query) {
@@ -123,7 +140,7 @@ function getAlbumResults(query) {
         })
         .then(responseJson => displayAlbumResults(responseJson))
         .catch(err => {
-            $('#js-error-message').text(`Something went wrong: ${err.message}`);
+            $('.js-album-error-message').text(`Something went wrong: ${err.message}`);
         });
 }
 
