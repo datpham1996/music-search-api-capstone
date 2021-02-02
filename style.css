@@ -57,7 +57,7 @@ html {
 }
 
 body {
-    border: 3px solid white;
+    /* border: 3px solid white; */
 }
 
 a {
@@ -149,13 +149,11 @@ header {
 
 header .logo {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
+    width: 100%;
     font-family: cursive;
     font-weight: bold;
     color: rgb(24, 83, 150);
-    font-size: 63px;
+    font-size: 50px;
     text-decoration: none;
 }
 
@@ -190,7 +188,6 @@ main.container {
     max-width: 1200px;
     text-align: center;
     margin: 20px auto;
-    padding: 100px;
 }
 
 main.container form label.form-left-column, main.container form button.form-right-column {
@@ -239,10 +236,10 @@ Footer styles (Main Module)
 footer {
     width: 100%;
     display: block;
+    text-align: center;
 }
 footer ul.contact-list{
     display: block;
-    text-align: center;
 }
 footer ul.contact-list li{
     display: inline-block;
@@ -253,7 +250,7 @@ footer ul.contact-list li{
 
 @media only screen and (max-width: 1600px) {
     body {
-        border: 3px solid yellow;
+        /* border: 3px solid yellow; */
     }
 }
 
@@ -261,7 +258,7 @@ footer ul.contact-list li{
 
 @media only screen and (max-width: 1024px) {
     body {
-        border: 3px solid blue;
+        /* border: 3px solid blue; */
     }
 }
 
@@ -269,15 +266,9 @@ footer ul.contact-list li{
 
 @media only screen and (max-width: 768px) {
     body {
-        border: 3px solid red;
+        /* border: 3px solid red; */
     }
-    header {
-        display: flex;
-        justify-content: space-between;
-    }
-    header nav {
-        margin-top: 14px;
-    }
+    
     section {
         padding: 0 10%;
     }
@@ -290,7 +281,7 @@ footer ul.contact-list li{
 
 @media only screen and (max-width: 640px) {
     body {
-        border: 3px solid pink;
+        /* border: 3px solid pink; */
     }
 
 }
@@ -299,7 +290,7 @@ footer ul.contact-list li{
 
 @media only screen and (max-width: 480px) {
     body {
-        border: 3px solid pink;
+        /* border: 3px solid pink; */
     }
 }
 
@@ -307,7 +298,7 @@ footer ul.contact-list li{
 
 @media only screen and (max-width: 320px) {
     body {
-        border: 3px solid pink;
+        /* border: 3px solid pink; */
     }
 }
 

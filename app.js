@@ -1,10 +1,22 @@
 'use strict';
-
+function checkEmptyImage(inputURL) {
+    let outputURL = inputURL
+    if (inputURL === undefined) {
+        outputURL = "https://legacytaylorsville.com/wp-content/uploads/2015/07/No-Image-Available1.png"
+    }
+    if (inputURL == null) {
+        outputURL = "https://legacytaylorsville.com/wp-content/uploads/2015/07/No-Image-Available1.png"
+    }
+    if (inputURL == "") {
+        outputURL = "https://legacytaylorsville.com/wp-content/uploads/2015/07/No-Image-Available1.png"
+    }
+    return outputURL
+}
 
 
 
 function displayTrackResults(responseJson) {
-    
+
     $('#results-track-list').empty();
     if (responseJson.results.trackmatches.track.length == 0) {
         $('.js-track-error-message').text(`No results`);
@@ -16,11 +28,14 @@ function displayTrackResults(responseJson) {
 
             html += `
         <li class="clearfix">
-        <img src="${responseJson.results.trackmatches.track[i].image[3]['#text']}" class="results-image" 
+        <img src="${checkEmptyImage(responseJson.results.trackmatches.track[i].image[3]['#text'])}" class="results-image" 
             alt="${responseJson.results.trackmatches.track[i].name}">
-        <h3>${responseJson.results.trackmatches.track[i].name}</h3>
+        <h3>
+            <a href="${responseJson.results.trackmatches.track[i].url}">
+                ${responseJson.results.trackmatches.track[i].name}  
+            </a>
+        </h3>
           <p>Description: ${responseJson.results.trackmatches.track[i].artist}</p>
-          <p>URL : <a href="${responseJson.results.trackmatches.track[i].url}">${responseJson.results.trackmatches.track[i].url}</a></p>
         </li>`;
         }
 
@@ -57,7 +72,7 @@ function watchTrackForm() {
 
 
 function displayArtistResults(responseJson) {
-   
+
     $('#results-artist-list').empty();
     if (responseJson.results.artistmatches.artist.length == 0) {
         $('.js-artist-error-message').text(`No results`);
@@ -67,10 +82,13 @@ function displayArtistResults(responseJson) {
         for (let i = 0; i < responseJson.results.artistmatches.artist.length; i++) {
             html += `
         <li class="clearfix">
-        <img src="${responseJson.results.artistmatches.artist[i].image[3]['#text']}" class="results-image" 
+        <img src="${checkEmptyImage(responseJson.results.artistmatches.artist[i].image[3]['#text'])}" class="results-image" 
             alt="${responseJson.results.artistmatches.artist[i].name}">
-        <h3>${responseJson.results.artistmatches.artist[i].name}</h3>
-          <p>URL : <a href="${responseJson.results.artistmatches.artist[i].url}">${responseJson.results.artistmatches.artist[i].url}</a></p>
+        <h3>
+            <a href="${responseJson.results.artistmatches.artist[i].url}">
+                ${responseJson.results.artistmatches.artist[i].name}
+            </a>
+        </h3>
         </li>`;
         }
 
@@ -107,7 +125,7 @@ function watchArtistForm() {
 
 
 function displayAlbumResults(responseJson) {
-    
+
     $('#results-album-list').empty();
     if (responseJson.results.albummatches.album.length == 0) {
         $('.js-album-error-message').text(`No results`);
@@ -117,10 +135,13 @@ function displayAlbumResults(responseJson) {
         for (let i = 0; i < responseJson.results.albummatches.album.length; i++) {
             html += `
         <li class="clearfix">
-        <img src="${responseJson.results.albummatches.album[i].image[3]['#text']}" class="results-image" 
+        <img src="${checkEmptyImage(responseJson.results.albummatches.album[i].image[3]['#text'])}" class="results-image" 
             alt="${responseJson.results.albummatches.album[i].name}">
-        <h3>${responseJson.results.albummatches.album[i].name}</h3>
-          <p>URL : <a href="${responseJson.results.albummatches.album[i].url}">${responseJson.results.albummatches.album[i].url}</a></p>
+        <h3>
+            <a href="${responseJson.results.albummatches.album[i].url}">
+                 ${responseJson.results.albummatches.album[i].name}
+            </a>
+        </h3>
         </li>`;
         }
 
