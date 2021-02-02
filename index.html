@@ -14,19 +14,14 @@
 
 <body>
   <header>
+    <a href="#" class="logo">Music Dream </a>
     <nav>
-      <a href="#" class="logo">Music Dream </a>
-      <div class="dropdown">
-        <button class="dropbtn">Menu</button>
-        <div class="dropdown-content">
-          <a href="#">Home</a>
-          <a href="#">Search Track</a>
-          <a href="#">Search Artist</a>
-          <a href="#">Search Album</a>
-        </div>
-      </div>
-
-
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Search Track</a></li>
+        <li><a href="#">Search Artist</a></li>
+        <li><a href="#">Search Album</a></li>
+      </ul>
     </nav>
   </header>
   <section class="wrapper">
@@ -39,8 +34,8 @@
   <main class="container">
     <form class="track-form">
       <label class="form-left-column" for="track">Search for any track</label>
-        <input type="text" name="track" id="track" required value="Disarm Me" />
-      
+      <input type="text" name="track" id="track" required value="Disarm Me" />
+
 
       <button class="form-right-column" type="submit" name="Submit" value="Submit">Search</button>
     </form>
@@ -53,8 +48,8 @@
 
     <form class="artist-form">
       <label class="form-left-column" for="artist">Search for any artist</label>
-        <input type="text" name="artist" id="artist" required value="Kaskade" />
-     
+      <input type="text" name="artist" id="artist" required value="Kaskade" />
+
 
       <button class="form-right-column" type="submit" name="Submit" value="Submit">Search</button>
     </form>
@@ -63,12 +58,12 @@
 
       <ul id="results-artist-list"></ul>
     </section>
-  
-   
+
+
     <form class="album-form">
       <label class="form-left-column" for="album">Search for any album</label>
-        <input type="text" name="album" id="album" required value="Automatic" />
-    
+      <input type="text" name="album" id="album" required value="Automatic" />
+
 
       <button class="form-right-column" type="submit" name="Submit" value="Submit">Search</button>
     </form>
@@ -77,28 +72,28 @@
 
       <ul id="results-album-list"></ul>
     </section>
-   
+
   </main>
 
   <footer>
     @2021 Dat Pham
     <ul class="contact-list">
       <li>
-          <a href="mailto:evanpoe91@yahoo.com?subject=Responding%20to%20Your%20Portfolio!">
-              <i class="fa fa-envelope"></i>
-          </a>
+        <a href="mailto:evanpoe91@yahoo.com?subject=Responding%20to%20Your%20Portfolio!">
+          <i class="fa fa-envelope"></i>
+        </a>
       </li>
       <li>
-          <a href="https://www.linkedin.com/in/evan-poe-full-stack-developer/" target="_blank">
-              <i class="fab fa-linkedin"></i>
-          </a>
+        <a href="https://www.linkedin.com/in/evan-poe-full-stack-developer/" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
       </li>
       <li>
-          <a href="https://github.com/EvanPoe" target="_blank">
-              <i class="fab fa-github"></i>
-          </a>
+        <a href="https://github.com/EvanPoe" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
       </li>
-  </ul>
+    </ul>
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
