@@ -14,7 +14,7 @@ function checkEmptyImage(inputURL) {
 }
 
 
-
+// track functionality start
 function displayTrackResults(responseJson) {
 
     $('#results-track-list').empty();
@@ -30,11 +30,11 @@ function displayTrackResults(responseJson) {
         <li class="clearfix">
         <img src="${checkEmptyImage(responseJson.results.trackmatches.track[i].image[3]['#text'])}" class="results-image" 
             alt="${responseJson.results.trackmatches.track[i].name}">
-        <h3>
-            <a href="${responseJson.results.trackmatches.track[i].url}">
-                ${responseJson.results.trackmatches.track[i].name}  
-            </a>
-        </h3>
+            <h3> 
+                 <a href="${responseJson.results.trackmatches.track[i].url}" target="_blank"> 
+                    ${responseJson.results.trackmatches.track[i].name} 
+                 </a> 
+            </h3>
           <p>Description: ${responseJson.results.trackmatches.track[i].artist}</p>
         </li>`;
         }
@@ -45,8 +45,9 @@ function displayTrackResults(responseJson) {
 }
 
 function getTrackResults(query) {
-    const searchTrackUrl = `https://ws.audioscrobbler.com/2.0/?method=track.search&track=${query}&api_key=5f9a6038d66d4bba8b7e4a2a867a1226&format=json`
-
+    const searchTrackUrl = `
+    https://ws.audioscrobbler.com/2.0/?method=track.search&track=${query}&api_key=5f9a6038d66d4bba8b7e4a2a867a1226&format=json
+    `
     fetch(searchTrackUrl)
         .then(response => {
             if (response.ok) {
@@ -69,8 +70,9 @@ function watchTrackForm() {
         getTrackResults(track);
     });
 }
+// track functionality end
 
-
+// artist functionality start
 function displayArtistResults(responseJson) {
 
     $('#results-artist-list').empty();
@@ -85,7 +87,7 @@ function displayArtistResults(responseJson) {
         <img src="${checkEmptyImage(responseJson.results.artistmatches.artist[i].image[3]['#text'])}" class="results-image" 
             alt="${responseJson.results.artistmatches.artist[i].name}">
         <h3>
-            <a href="${responseJson.results.artistmatches.artist[i].url}">
+            <a href="${responseJson.results.artistmatches.artist[i].url}" target="_blank">
                 ${responseJson.results.artistmatches.artist[i].name}
             </a>
         </h3>
@@ -98,8 +100,9 @@ function displayArtistResults(responseJson) {
 }
 
 function getArtistResults(query) {
-    const searchArtistUrl = `https://ws.audioscrobbler.com/2.0/?method=artist.search&artist=${query}&api_key=5f9a6038d66d4bba8b7e4a2a867a1226&format=json`
-
+    const searchArtistUrl = `
+    https://ws.audioscrobbler.com/2.0/?method=artist.search&artist=${query}&api_key=5f9a6038d66d4bba8b7e4a2a867a1226&format=json
+    `
     fetch(searchArtistUrl)
         .then(response => {
             if (response.ok) {
@@ -122,10 +125,10 @@ function watchArtistForm() {
         getArtistResults(artist);
     });
 }
+// artist functionality end
 
-
+// album functionality start
 function displayAlbumResults(responseJson) {
-
     $('#results-album-list').empty();
     if (responseJson.results.albummatches.album.length == 0) {
         $('.js-album-error-message').text(`No results`);
@@ -138,7 +141,7 @@ function displayAlbumResults(responseJson) {
         <img src="${checkEmptyImage(responseJson.results.albummatches.album[i].image[3]['#text'])}" class="results-image" 
             alt="${responseJson.results.albummatches.album[i].name}">
         <h3>
-            <a href="${responseJson.results.albummatches.album[i].url}">
+            <a href="${responseJson.results.albummatches.album[i].url}" target="_blank">
                  ${responseJson.results.albummatches.album[i].name}
             </a>
         </h3>
@@ -151,7 +154,9 @@ function displayAlbumResults(responseJson) {
 }
 
 function getAlbumResults(query) {
-    const searchAlbumUrl = `https://ws.audioscrobbler.com/2.0/?method=album.search&album=${query}&api_key=5f9a6038d66d4bba8b7e4a2a867a1226&format=json`
+    const searchAlbumUrl = `
+    https://ws.audioscrobbler.com/2.0/?method=album.search&album=${query}&api_key=5f9a6038d66d4bba8b7e4a2a867a1226&format=json
+    `
     fetch(searchAlbumUrl)
         .then(response => {
             if (response.ok) {
@@ -174,6 +179,7 @@ function watchAlbumForm() {
         getAlbumResults(album);
     });
 }
+// album functionality end
 
 function main() {
     watchTrackForm();

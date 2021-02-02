@@ -31,13 +31,11 @@
     <h3>This is a simple application that will help your search for your favorite track, artist, or album!</h3>
   </section>
 
-
   <main class="container">
+    <!-- track form start -->
     <form class="track-form">
       <label class="form-left-column" for="track">Search for any track</label>
       <input type="text" name="track" id="track" required value="Disarm Me" />
-
-
       <button class="form-right-column" type="submit" name="Submit" value="Submit">Search</button>
     </form>
     <p class="js-track-error-message error-message"></p>
@@ -45,13 +43,12 @@
 
       <ul id="results-track-list"></ul>
     </section>
+<!-- track form end-->
 
-
+<!-- artist form start -->
     <form class="artist-form">
       <label class="form-left-column" for="artist">Search for any artist</label>
       <input type="text" name="artist" id="artist" required value="Kaskade" />
-
-
       <button class="form-right-column" type="submit" name="Submit" value="Submit">Search</button>
     </form>
     <p class="js-artist-error-message error-message"></p>
@@ -59,8 +56,9 @@
 
       <ul id="results-artist-list"></ul>
     </section>
+<!-- artist form end -->
 
-
+<!-- album form end -->
     <form class="album-form">
       <label class="form-left-column" for="album">Search for any album</label>
       <input type="text" name="album" id="album" required value="Automatic" />
@@ -73,7 +71,7 @@
 
       <ul id="results-album-list"></ul>
     </section>
-
+<!-- album form end -->
   </main>
 
   <footer>
