@@ -205,7 +205,7 @@ section.wrapper {
     margin-right: auto;
     padding: 40px;
     text-align: center;
-    line-height: 20px;
+    
 }
 
 /* main.container form label.form-left-column input {
@@ -238,8 +238,15 @@ Footer styles (Main Module)
 
 footer {
     width: 100%;
-    height: 60px;
-    /* Height of the footer */
+    display: block;
+}
+footer ul.contact-list{
+    display: block;
+    text-align: center;
+}
+footer ul.contact-list li{
+    display: inline-block;
+    width: auto;
 }
 
 /*large desktop*/
